@@ -1,6 +1,4 @@
 
-
-
 # Sentiment Analysis using BERT
 
 This repository contains a project for sentiment analysis using BERT (Bidirectional Encoder Representations from Transformers). The project involves training a BERT model to classify text data into positive and negative sentiments. The project is implemented using PyTorch and the `transformers` library by Hugging Face.
@@ -59,25 +57,31 @@ cd sentiment-analysis-bert
 
 Place your training data (`train-1.tsv`) and test data (`test_YourLastName_UID-1.tsv`) in the repository directory.
 
-3. **Run the Training Script:**
+3. **Run the Script:**
 
 ```bash
-python train.py
-```
-
-4. **Run the Prediction Script:**
-
-```bash
-python predict.py
+python sentiment_analysis.py
 ```
 
 ## Model Training and Evaluation
 
-The training script (`train.py`) includes functions for training and evaluating the model. It uses a custom dataset class to handle the text data and a DataLoader for batching. The model is trained using the AdamW optimizer and cross-entropy loss function. The training process includes periodic evaluation on the validation set, and the best model is saved based on validation loss.
+The script `sentiment_analysis.py` includes functions for training and evaluating the model. It uses a custom dataset class to handle the text data and a DataLoader for batching. The model is trained using the AdamW optimizer and cross-entropy loss function. The training process includes periodic evaluation on the validation set, and the best model is saved based on validation loss.
+
+### Training Function
+
+The `train` function trains the BERT model on the training data, prints the loss and accuracy for each batch, and returns the average loss and accuracy for the epoch.
+
+### Evaluation Function
+
+The `evaluate` function evaluates the model on the validation data, calculates the loss, accuracy, and F1 score, and returns these metrics.
 
 ## Prediction on Test Data
 
-The prediction script (`predict.py`) loads the trained model and makes predictions on the test data. The predictions are saved in a TSV file.
+After training, the script makes predictions on the test data. The predictions are saved in a TSV file.
+
+### Prediction Function
+
+The script loads the trained model and uses it to make predictions on the test data. The predictions are then saved to `test_YourLastName_UID_predictions.tsv`.
 
 ## Results
 
@@ -88,7 +92,6 @@ The results of the sentiment analysis, including accuracy and F1 score, are prin
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
 - [Hugging Face Transformers](https://github.com/huggingface/transformers)
 - [PyTorch](https://pytorch.org/)
-
 ```
 
-Save this as `README.md` in your project directory. This file provides an overview of the project, instructions for setting up the environment, and details on how to run the training and prediction scripts.
+Save this as `README.md` in your project directory. This file provides an overview of the project, instructions for setting up the environment, and details on how to run the script that includes both training and prediction functions.
