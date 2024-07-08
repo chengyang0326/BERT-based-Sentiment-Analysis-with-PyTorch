@@ -49,7 +49,7 @@ pip install torch transformers scikit-learn pandas numpy
 1. **Clone the Repository:**
 
 ```bash
-git clone https://github.com/yourusername/sentiment-analysis-bert.git
+git clone https://github.com/chengyang0326/BERT-based-Sentiment-Analysis-with-PyTorch.git
 cd sentiment-analysis-bert
 ```
 
