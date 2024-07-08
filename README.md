@@ -1,6 +1,6 @@
-Sure! Here is a `README.md` file for your sentiment analysis project using BERT:
 
-```markdown
+
+
 # Sentiment Analysis using BERT
 
 This repository contains a project for sentiment analysis using BERT (Bidirectional Encoder Representations from Transformers). The project involves training a BERT model to classify text data into positive and negative sentiments. The project is implemented using PyTorch and the `transformers` library by Hugging Face.
